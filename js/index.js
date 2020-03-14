@@ -32,9 +32,9 @@ $(function () {
     function copyText(text) {
         let flag = false;
         let textarea = document.createElement("input");
-        textarea.style.position = 'absolute';
-        textarea.style.top = '50%';
-        textarea.style.left = '50%';
+        textarea.style.position = 'fixed';
+        textarea.style.top = (document.documentElement.clientWidth / 2) + "px";
+        textarea.style.left = (document.documentElement.clientHeight / 2) + "px";
         let currentFocus = document.activeElement;
         document.body.appendChild(textarea);
         textarea.value = text;
